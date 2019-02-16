@@ -90,7 +90,7 @@ public class RestoreController {
 
     return restoreRepository.findById(id)
                 .map(lease ->{
-                lease.setStatusRestore("paid");
+                lease.setStatusRestore("restore");
                 return restoreRepository.save(lease);
             }
             ).orElseGet(() ->{
