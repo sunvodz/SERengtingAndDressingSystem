@@ -33,8 +33,8 @@ public class Lease {
     private  String leaseStatus;
 
     @NotNull
-    @Pattern(regexp = "[ชุด].+")
-    @Size(min=5,max=50)
+    @Pattern(regexp = "(ชุด).+")
+    @Size(min=5,max=20)
     @Column(unique=true)
     private    String commentRenting;
 

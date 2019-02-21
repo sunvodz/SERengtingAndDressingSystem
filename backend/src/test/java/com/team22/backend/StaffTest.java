@@ -283,7 +283,7 @@ public class StaffTest {
 
 		Staff s2 = new Staff();
 		s2.setStaffName("Owner1");
-		s2.setStaffIds("St10");
+		s2.setStaffIds("St9");
 		s2.setStaffGender("Man");
 		s2.setStaffJobtype("Full Time");
 		s2.setStaffPhone("086-141-9833");
