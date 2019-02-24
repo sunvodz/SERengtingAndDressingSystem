@@ -209,4 +209,29 @@ public class BookingCancleTest{
             System.out.println();
     }
 }  
+    @Test
+    public void TestTypeReasonCannotBeNull() {
+
+        TypeReason tr = new TypeReason();
+        tr.setTypeReasonID(null);
+        tr.setTypeReasonName(null);
+
+        try {
+            entityManager.persist(tr);
+            entityManager.flush();
+            fail("Should not pass to this line : TestEducationCannotBeNull");
+        } catch (javax.validation.ConstraintViolationException e) {
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("2.1 > TestTypeReasonCannotBeNull:");
+            System.out.println(e);
+            System.out.println();
+            System.out.println();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
+        }
+
+    }
 }
